@@ -29,13 +29,9 @@
 
 <script>
   export default {
-    data () {
-      return {
-        meetups: [
-          {imageUrl: 'static/car.jpg', id: 'adfg', title: 'Meetup in Berlin'},
-          {imageUrl: 'static/car1.jpg', id: 'adfg', title: 'Meetup in London'},
-          {imageUrl: 'static/car2.jpg', id: 'adfg', title: 'Meetup in Singapore'}
-        ]
+    computed: {
+      meetups () {
+        return this.$store.getters.featuredMeetup
       }
     },
     methods: {
