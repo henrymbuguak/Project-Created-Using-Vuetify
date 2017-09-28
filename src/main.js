@@ -6,11 +6,13 @@ import * as firebase from 'firebase'
 import router from './router'
 import {store} from './store'
 import FilterDate from './filters/date'
+import Alert from './components/shared/Alert.vue'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 
 Vue.filter('date', FilterDate)
+Vue.component('app-alert', Alert)
 
 /* eslint-disable no-new */
 new Vue({
